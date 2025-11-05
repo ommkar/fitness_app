@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:8000/generate-plan';
+const API_URL = import.meta.env.VITE_API_URL || '/api/generate-plan';
 
 export async function generatePlan(payload) {
   const res = await fetch(API_URL, {
